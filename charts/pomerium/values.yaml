@@ -149,6 +149,7 @@ proxy:
   authenticateServiceUrl: ""
   authorizeInternalUrl: ""
   service:
+    type: ClusterIP
     annotations: {}
     # externalIPs: []
     # externalTrafficPolicy: ""

@@ -24,7 +24,7 @@ metadata:
   {{- end }}
 {{- end }}
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.proxy.service.type }}
 {{- if .Values.proxy.service.externalIPs }}
   externalIPs:
 {{ toYaml .Values.proxy.service.externalIPs | indent 4 }}
