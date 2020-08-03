@@ -150,6 +150,8 @@ proxy:
   authorizeInternalUrl: ""
   service:
     annotations: {}
+    # externalIPs: []
+    # externalTrafficPolicy: ""
   deployment:
     annotations: {}
     extraEnv: {}

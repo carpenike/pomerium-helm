@@ -25,6 +25,13 @@ metadata:
 {{- end }}
 spec:
   type: {{ .Values.service.type }}
+{{- if .Values.proxy.service.externalIPs }}
+  externalIPs:
+{{ toYaml .Values.proxy.service.externalIPs | indent 4 }}
+{{- end }}
+{{- if .Values.proxy.service.externalTrafficPolicy }}
+  externalTrafficPolicy: {{ .Values.proxy.service.externalTrafficPolicy }}
+{{- end }}
   ports:
     - port: {{ template "pomerium.service.externalPort" . }}
       targetPort: {{ template "pomerium.httpTrafficPort.name" . }}
